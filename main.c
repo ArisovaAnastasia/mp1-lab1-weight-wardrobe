@@ -5,6 +5,7 @@ int main(){
     float p_DSP = 0.00065, p_DVP = 0.00085, p_wood = 0.0015; // кг/см^3
     float m_wall, m_casing, m_doors, m_shelfs, mass;
 
+    printf("Введите высоту, ширину, глубину в см: ");
     scanf("%i%i%i", &h, &w, &d);
 
     if((180<=h)&&(h<= 220)&&(80<=w)&&(w<=120)&&(50<=d)&&(d<=90)){
