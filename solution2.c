@@ -2,15 +2,11 @@
 
 int main() {
     int height = 0, width = 0, depth = 0;
-    int backThick = 5, sideThick = 15, coverThick = 15, doorThick = 1; // В миллиметрах
     long double tree = 690/1e9, dsp = 550/1e9, dvp = 400/1e9;
 
-    printf("Enter the data: Height, Width, Depth\n");
-    scanf("%i%i%i", &height, &width, &depth);
-
-    if ((height < 180 || height > 220) && (width < 80 || width > 120) && (depth < 50 || depth > 90)) {
-        printf("Incorrect Values");
-        return 0;
+    while ((height < 180 || height > 220) && (width < 80 || width > 120) && (depth < 50 || depth > 90)) {
+        printf("Enter the data: Height, Width, Depth\n");
+        scanf("%i%i%i", &height, &width, &depth);
     }
 
     // Переводим сантиметры в миллиметры
@@ -19,10 +15,10 @@ int main() {
     depth *= 10;
 
     // Находим объёмы
-    int backMass = height * width * backThick;
-    int sideMass = height * depth * sideThick;
-    int coverMass = depth * width * coverThick;
-    int doorMass = height * width * doorThick;
+    int backMass = height * width * 5;
+    int sideMass = height * depth * 15;
+    int coverMass = depth * width * 15;
+    int doorMass = height * width;
     int shelfMass = width * depth;
     int shelfNum = height / 400;
 
