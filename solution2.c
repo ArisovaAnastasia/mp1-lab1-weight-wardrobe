@@ -2,7 +2,6 @@
 
 int main() {
     int height = 0, width = 0, depth = 0;
-    long double tree = 690/1e9, dsp = 550/1e9, dvp = 400/1e9;
 
     while ((height < 180 || height > 220) && (width < 80 || width > 120) && (depth < 50 || depth > 90)) {
         printf("Enter the data: Height, Width, Depth\n");
@@ -22,7 +21,7 @@ int main() {
     int shelfMass = width * depth;
     int shelfNum = height / 400;
 
-    long double mass = dvp * backMass + dsp * (2 * sideMass + 2 * coverMass + shelfNum * shelfMass) + tree * doorMass;
+    long double mass = (400/1e9) * backMass + (550/1e9) * (2 * sideMass + 2 * coverMass + shelfNum * shelfMass) + (690/1e9) * doorMass;
     printf("%.2Lf kg/m^3", mass);
 
     return 0;
