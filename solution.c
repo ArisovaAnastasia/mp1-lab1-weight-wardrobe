@@ -1,30 +1,27 @@
 #include <stdio.h>
 
 int main() {
-    float height = 0, width = 0, depth = 0;
-    float backThick = 0.005, sideThick = 0.015, coverThick = 0.015, doorThick = 0.01; // В метрах
+    int height = 0, width = 0, depth = 0;
 
-    while ((height < 180 || height > 220) && (width < 80 || width > 120) && (depth < 50 || depth > 90)) {
+    while (!(180 <= height && height <= 220) || !(80 <= width && width <= 120) || !(50 <= depth && depth <= 90)) {
         printf("Enter the data: Height, Width, Depth\n");
-        scanf("%f%f%f", &height, &width, &depth);
+        scanf("%i%i%i", &height, &width, &depth);
     }
 
-    int shelfNum = height / 40;
-    // Переводим сантиметры в метры
-    height /= 100;
-    width /= 100;
-    depth /= 100;
+    // Переводим сантиметры в миллиметры
+    height *= 10;
+    width *= 10;
+    depth *= 10;
 
-    float backMass = 400 * height * width * backThick;
-    float sideMass = 550 * height * depth * sideThick;
-    float coverMass = 550 * depth * width * coverThick;
-    float doorMass = 690 * height * width * doorThick;
-    float shelfMass = 550 * width * depth;
+    // Находим объёмы
+    int backMass = height * width * 5;
+    int sideMass = height * depth * 15;
+    int coverMass = depth * width * 15;
+    int doorMass = height * width;
+    int shelfMass = width * depth * (height/400);
 
-    printf("%f\n%f\n%f\n%i\n",height,width,depth,shelfNum); // Debug Moment
-
-    float mass = (backMass + 2 * sideMass + 2 * coverMass + doorMass + shelfNum * shelfMass);
-    printf("%.2f kg/m^3", mass);
+    long double mass = (400/1e9) * backMass + (550/1e9) * (2 * sideMass + 2 * coverMass + shelfMass) + (690/1e9) * doorMass;
+    printf("%.2Lf kg/m^3", mass);
 
     return 0;
 }
