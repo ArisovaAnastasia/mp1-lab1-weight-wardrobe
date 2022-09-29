@@ -1,11 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int height = 0, width = 0, depth = 0;
+    int height, width, depth;
 
-    while ((height < 180 || height > 220) && (width < 80 || width > 120) && (depth < 50 || depth > 90)) {
-        printf("Enter the data: Height, Width, Depth\n");
-        scanf("%i%i%i", &height, &width, &depth);
+    printf("Enter the data: Height, Width, Depth\n");
+    scanf("%i%i%i", &height, &width, &depth);
+
+    if ((height < 180 || height > 220) && (width < 80 || width > 120) && (depth < 50 || depth > 90)) {
+        printf("Incorrect Values");
+        return 0;
     }
 
     // Переводим сантиметры в миллиметры
