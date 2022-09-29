@@ -8,15 +8,12 @@ int main(){
     scanf("%i%i%i", &h, &w, &d);
 
     if((180<=h)&&(h<= 220)&&(80<=w)&&(w<=120)&&(50<=d<= 90)){
-        m_wall = h*w*0.5*p_DVP;
-        m_casing = 2*(d*(w+h)*1.5*p_DSP);
-        m_doors = h*w*p_wood;
-        m_shelfs = d*w*(h/40)*1.5*p_DSP;
-        mass = m_wall+m_doors+m_casing+m_shelfs;
+        m_wall = h*w*0.5*p_DVP; // масса стенки
+        m_casing = 2*d*(w+h)*1.5*p_DSP; // масса боковин и верхних и нижних крышек
+        m_doors = h*w*p_wood; // масса дверей
+        m_shelfs = d*w*(h/40)*1.5*p_DSP; // масса полок
+        mass = m_wall+m_doors+m_casing+m_shelfs; // общая масса
         printf("%.2f", mass);
-
     } else
         printf("Введены некоректные данные");
-    //printf("%i%i%i", h, w, d);
-
 }
