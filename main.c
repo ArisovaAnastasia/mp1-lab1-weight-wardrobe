@@ -19,4 +19,5 @@ int main(){
         printf("%.2f", mass);
     } else
         printf("Введены некоректные данные");
+
 }
