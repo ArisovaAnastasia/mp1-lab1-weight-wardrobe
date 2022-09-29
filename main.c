@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
+    setlocale(LC_ALL,"Russian");
     int h, w, d;
     float p_DSP = 0.00065, p_DVP = 0.00085, p_wood = 0.0015; // кг/см^3
     float m_wall, m_casing, m_doors, m_shelfs, mass;
