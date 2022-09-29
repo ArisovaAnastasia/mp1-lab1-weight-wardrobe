@@ -18,10 +18,9 @@ int main() {
     int sideMass = height * depth * 15;
     int coverMass = depth * width * 15;
     int doorMass = height * width;
-    int shelfMass = width * depth;
-    int shelfNum = height / 400;
+    int shelfMass = width * depth * (height/400);
 
-    long double mass = (400/1e9) * backMass + (550/1e9) * (2 * sideMass + 2 * coverMass + shelfNum * shelfMass) + (690/1e9) * doorMass;
+    long double mass = (400/1e9) * backMass + (550/1e9) * (2 * sideMass + 2 * coverMass + shelfMass) + (690/1e9) * doorMass;
     printf("%.2Lf kg/m^3", mass);
 
     return 0;
