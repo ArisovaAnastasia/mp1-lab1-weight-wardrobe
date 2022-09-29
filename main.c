@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main(){
+    int h, w, d;
+    float p_DSP = 0.00065, p_DVP = 0.00085, p_wood = 0.0015; // кг/см^3
+    float m_wall, m_casing, m_doors, m_shelfs, mass;
+
+    scanf("%i%i%i", &h, &w, &d);
+
+    if((180<=h)&&(h<= 220)&&(80<=w)&&(w<=120)&&(50<=d<= 90)){
+        m_wall = h*w*0.5*p_DVP;
+        m_casing = 2*(d*(w+h)*1.5*p_DSP);
+        m_doors = h*w*p_wood;
+        m_shelfs = d*w*(h/40)*1.5*p_DSP;
+        mass = m_wall+m_doors+m_casing+m_shelfs;
+        printf("%.2f", mass);
+
+    } else
+        printf("Введены некоректные данные");
+    //printf("%i%i%i", h, w, d);
+
+}
