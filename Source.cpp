@@ -5,25 +5,25 @@ int main()
 {
 	setlocale(LC_ALL, "Rus");
 	float dvp, dsp, wood;
-	dvp = 0.5;//â ãðàììàõ íà cì3 
+	dvp = 0.5;//Ð² Ð³Ñ€Ð°Ð¼Ð¼Ð°Ñ… Ð½Ð° cÐ¼3 
 	dsp = 1; 
 	wood = 1.5;
 	float h, w, d;
-	printf("Ââåäèòå âûñîòó,ãëóáèíó,øèðèíó\n");
+	printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ,Ð³Ð»ÑƒÐ±Ð¸Ð½Ñƒ,ÑˆÐ¸Ñ€Ð¸Ð½Ñƒ\n");
 	scanf_s("%f %f %f", &h, &d, &w);
 	if ((h > 220) || (h < 180))
 	{
-		printf("Âûñîòà ââåäåíà íåâåðíî");
+		printf("Ð’Ñ‹ÑÐ¾Ñ‚Ð° Ð²Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð¾");
 		return 0;
 	}
 	if ((d > 90) || (d < 50))
 	{
-		printf("Ãëóáèíà ââåäåíà íåâåðíî");
+		printf("Ð“Ð»ÑƒÐ±Ð¸Ð½Ð° Ð²Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð¾");
 		return 0;
 	}
 	if ((w > 120) || (w < 80))
 	{
-		printf("Øèðèíà ââåäåíà íåâåðíî");
+		printf("Ð¨Ð¸Ñ€Ð¸Ð½Ð° Ð²Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð¾");
 		return 0;
 	}
 	float backwall, sidewalls, caps, doors,shelfs;
@@ -42,6 +42,7 @@ int main()
 	shelfs = numberofshelfs * (w * d * 1.5) * dsp;
 	float total;
 	total = backwall + sidewalls + caps + doors + shelfs;
-	printf("Ìàññà øêàôà â ãðàììàõ\n");
+	printf("ÐœÐ°ÑÑÐ° ÑˆÐºÐ°Ñ„Ð° Ð² Ð³Ñ€Ð°Ð¼Ð¼Ð°Ñ…\n");
 	printf("%f", total);
+	return 0;
 }
