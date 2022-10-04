@@ -16,7 +16,9 @@ int main(){
         m_doors = h*w*p_wood; // масса дверей
         m_shelfs = d*w*(h/40)*1.5*p_DSP; // масса полок
         mass = m_wall+m_doors+m_casing+m_shelfs; // общая масса
-        printf("%.2f", mass);
+        printf("Масса готового шкафа %.2f", mass);
+        printf(" кг");
     } else
         printf("Введены некоректные данные");
+    return 0;
 }
