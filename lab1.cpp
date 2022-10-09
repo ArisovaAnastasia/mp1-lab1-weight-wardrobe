@@ -7,7 +7,7 @@ int main()
 		printf(" vvedite visotu, shiriny i glybiny");
 		scanf_s("%f %f %f", &h, &w, &d);
 	} while (h < 180 || h>220 || w < 80 || w > 120 || d < 50 || d>90);
-	//плотность дсп 820 кг\м3, плотность двп 950 кг\м3 
+	// density dsp 820 kg/m3, density dvp 950 kg/m3
 	mzs = (h * w * 0.5) * 0.00095;
 	mb = ((h * d * 1.5) * 0.00082)*2;
 	mk = ((w * d * 1.5) * 0.00082) * 2;
