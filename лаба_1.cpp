@@ -1,5 +1,5 @@
-#include<stdio.h>;
-#include<locale.h>;
+#include<stdio.h>
+#include<locale.h>
 
 void main()
 {
@@ -14,7 +14,7 @@ void main()
 		m2 = (2 * (h * d * 1.5) / 1000000) * 750;
 		m3 = (2 * (d * w * 1.5) / 1000000) * 750;
 		m4 = ((h * w) / 1000000) * 1540;
-		m5 = ((h / 40) * (w * d * 0.15) / 1000000) * 750;
+		m5 = ((h / 40) * (w * d * 1.5) / 1000000) * 750;
 		printf("масса шкафа равна %.2f кг", m1 + m2 + m3 + m4 + m5);
 	}
 	else
